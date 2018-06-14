@@ -1,0 +1,59 @@
+<div class="content">
+  <div class="total-result">
+    <label for="TotalResult">Total Result : </label>
+    <label id="TotalResult">{{totalRows}}</label>
+  </div>
+<div class="result-content">
+  <ul class="result-list">
+    <li class="result-item" *ngFor="let item of dataList | orderBy: {property: column, direction: direction}">
+      <div class="item">
+        <div class="row">
+        <div class="avatar col-md-3"><img [src]="item.avatar_url" alt="" class="img-responsive"> </div>
+        <div class="item-data col-md-6">
+          <h3 class="name">{{item.login}}</h3>
+          <p class="profile-url">{{item.url}}</p>
+          <div class="data-one-two">
+            <table>
+              <tr>
+                <td>Repository Name</td>
+                <td>{{item.repos_url}}</td>
+              </tr>
+              <tr>
+                <td>Organization URL</td>
+                <td>{{item.organizations_url}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="btn-detail col-md-3">
+           <button class="btn btn-primary" type="button">Details</button>
+           
+        </div>
+      </div>
+      <div class="row">
+        <div class="item-list-details col-md-12">
+          <table>
+            <tr>
+              <td>Clone Repo url </td>
+              <td>{{item.clone_url}}</td>
+            </tr>
+            <tr>
+              <td>Created at </td>
+              <td>{{item.created_at}}</td>
+            </tr>
+            <tr>
+              <td>Updated at </td>
+              <td>{{item.updated_at}}</td>
+            </tr>
+            <tr>
+              <td>size </td>
+              <td>{{item.size}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>

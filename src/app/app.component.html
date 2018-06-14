@@ -1,0 +1,31 @@
+<div class="main-content container">
+  <div class="search-bar">
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+            <ul class="sort-list row">
+              <li class="serch-options col-xs-5 col-md-3">
+                  <div class="form-group">
+                    <select name="FilterBy" id="FilterBy" class="form-control" (change)="sortChange($event.target.value)">
+                      <option value="SortByName">Sort By UserName</option>
+                      <option value="SortName">Sort Name</option>
+                      <option value="SortScore">Sort ById</option>
+                    </select>
+                </div>
+              </li>
+              <li class="serch-options col-xs-7 col-md-5">
+                  <div class="form-group" *ngIf="isSortByName">
+                      <input type="text" class="form-control" id="userName" (input)="nameChange($event.target.value)">
+                  </div>
+                  <div class="form-group" *ngIf="isSortName">
+                    <button (click)="sort('login')">Name sort</button>
+                </div>
+                <div class="form-group" *ngIf="isSortScore">
+                   <button (click)="sort('id')">Id sort</button>
+              </div>
+              </li>
+            </ul></div>
+        </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+

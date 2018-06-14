@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container {
+    background: #d4d4d4;
+  }
+  .container .result-content {
+    padding: 30px 50px;
+  }
+  .container .result-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .container .result-content ul li {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 8px;
+  }
+  button {
+    color: black;
+  }
